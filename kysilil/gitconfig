@@ -1,6 +1,6 @@
 [core]
     excludesfile = ~/.gitignore
-    autocrlf = input
+    autocrlf = true
     compression = -1
 
 [alias]

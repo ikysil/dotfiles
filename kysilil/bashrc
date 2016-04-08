@@ -102,3 +102,7 @@ function rse(){
 }
 
 export EDITOR=nano
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/kysilil/.sdkman"
+[[ -s "/home/kysilil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/kysilil/.sdkman/bin/sdkman-init.sh"
