@@ -1,7 +1,9 @@
 [core]
     excludesfile = ~/.gitignore
-    autocrlf = true
+    attributesfile = ~/.gitattributes
+    autocrlf = false
     compression = -1
+	trustctime = false
 
 [alias]
     st = status
