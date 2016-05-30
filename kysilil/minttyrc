@@ -1,6 +1,5 @@
 CtrlShiftShortcuts=yes
 Term=xterm-256color
-
 ForegroundColour=171,171,171
 BackgroundColour=0,0,0
 CursorColour=253,157,79
@@ -20,3 +19,7 @@ Cyan=35,237,218
 BoldCyan=107,243,230
 White=171,171,171
 BoldWhite=249,249,249
+Transparency=high
+OpaqueWhenFocused=yes
+BoldAsFont=yes
+PgUpDnScroll=no

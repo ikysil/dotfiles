@@ -4,6 +4,8 @@
     autocrlf = false
     compression = -1
 	trustctime = false
+    editor = nano
+    filemode = false
 
 [alias]
     st = status
@@ -35,7 +37,7 @@
     sb  = svn branch
 
     ds = diff --staged      # git ds - diff your staged changes == review before committing.
-    fup = log --since '1 day ago' --oneline --author ikysil@gmail.com  # I know what you did yesterday - great for follow-ups
+    fup = log --since '1 day ago' --oneline --author illya.kysil@arhs-developments.com  # I know what you did yesterday - great for follow-ups
     ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short  # pretty one-line log with tags, branches and authors
     lsv = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short --numstat    # a verbose ls, shows changed files too
 
@@ -68,6 +70,9 @@
     h = !git --no-pager log --graph -n 15
     a = !git --no-pager la -n 15
 
+    pr = pull --rebase
+    last = log -1 --stat
+    dc = diff --cached
 [user]
     name = Illya Kysil
     email = illya.kysil@arhs-developments.com
@@ -76,6 +81,7 @@
     diff = auto
     interactive = auto
     status = auto
+    ui = true
 [svn]
     rmdir = true
 [branch]
