@@ -1,5 +1,6 @@
 [core]
     excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
     autocrlf = input
     compression = -1
 
@@ -66,6 +67,9 @@
     h = !git --no-pager log --graph -n 15
     a = !git --no-pager la -n 15
 
+    pr = pull --rebase
+    last = log -1 --stat
+    dc = diff --cached
 [user]
     name = Illya Kysil
     email = ikysil@ikysil.name
@@ -74,6 +78,7 @@
     diff = auto
     interactive = auto
     status = auto
+    ui = true
 [svn]
     rmdir = true
 [branch]
