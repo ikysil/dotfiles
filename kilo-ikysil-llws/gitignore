@@ -1,0 +1,30 @@
+target/
+build/
+dist/
+private/
+.settings/
+.project
+.classpath
+
+.idea/
+*.iml
+
+*.log
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+!*.war/
+
+*~
+
+# maven versions plugin
+pom.xml.versionsBackup
+
+.gradle
+nbactions.xml
+nb-configuration.xml
+
