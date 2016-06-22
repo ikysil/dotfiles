@@ -1,0 +1,26 @@
+[core]
+    excludesfile = ~/.gitconfig.d/excludes
+    attributesfile = ~/.gitconfig.d/attributes
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = true
+
+[svn]
+    rmdir = true
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = simple
+
+[http]
+    sslverify = false
+    postBuffer = 524288000
+
+[credential]
+    helper = cache --timeout=18000

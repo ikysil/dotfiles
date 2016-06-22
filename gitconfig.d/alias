@@ -1,0 +1,66 @@
+[alias]
+    st = status
+    stb = status -sb
+    ci = commit
+    ca = commit -a
+    co = checkout
+    br = branch
+    hist = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s' --graph
+    histfull = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset%n%w(80,8,8)%s%n' --graph --name-status
+    new = !sh -c 'git checkout master && git fetch origin && git merge --ff origin/master && git checkout -b $1 master && git push -u origin $1'
+    rup = !git fetch origin && git rebase -p origin/master
+    ir = !git rebase -i origin/master
+    next = !git add -A && git rebase --continue
+    done = !git fetch origin && git rebase -p origin/master && git push
+    stage = !sh -c 'git checkout master && git merge --no-ff $1 && git fetch origin && git rebase -p origin/master && git push'
+    deploy = !sh -c 'git checkout master && echo $1 > tag && git tag -a $1 -m $2 && git fetch origin && git rebase -p origin/master && git push --tags origin master'
+    fix = !sh -c 'git checkout -b $1 master && git fetch origin && git rebase -p origin/master'
+    fixed = !git fetch origin && git rebase -i origin/master && git push origin master
+    rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
+    lgp = log --graph --pretty=format:'%Cblue%h%d%Creset %ar %Cgreen%an%Creset %s'
+
+    unstage = reset HEAD --
+
+    sc  = svn dcommit --rmdir
+    sf  = svn fetch
+    sfa = svn fetch --all
+    sr  = svn rebase
+    sb  = svn branch
+
+    ds = diff --staged      # git ds - diff your staged changes == review before committing.
+    fup = log --since '1 day ago' --oneline --author ikysil@gmail.com  # I know what you did yesterday - great for follow-ups
+    ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short  # pretty one-line log with tags, branches and authors
+    lsv = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short --numstat    # a verbose ls, shows changed files too
+
+    # some resets without explanation
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    # basic shortcuts
+    cp = cherry-pick
+    cl = clone
+    diff = diff --word-diff
+
+    # stash shortcuts
+    sl = stash list
+    sa = stash apply
+    ss = stash save
+    sd = stash drop
+    sp = stash pop
+
+    # log related - thanks to @mwd410
+    l = log 
+    lg = log --graph
+    la = !git lh --date-order --all 2> /dev/null
+    lb = log --graph --simplify-by-decoration
+    lba = !git lb --all 
+    h = !git --no-pager log --graph -n 15
+    a = !git --no-pager la -n 15
+
+    pr = pull --rebase
+    last = log -1 --stat
+    dc = diff --cached
