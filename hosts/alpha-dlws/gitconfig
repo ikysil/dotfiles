@@ -4,7 +4,6 @@
 
 [core]
     autocrlf = input
-    compression = -1
 
 [user]
     name = Illya Kysil

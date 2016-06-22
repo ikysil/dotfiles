@@ -25,3 +25,7 @@ private/
 pom.xml.versionsBackup
 
 .gradle
+
+nbactions.xml
+nb-configuration.xml
+

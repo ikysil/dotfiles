@@ -1,6 +1,8 @@
 [core]
     excludesfile = ~/.gitconfig.d/excludes
     attributesfile = ~/.gitconfig.d/attributes
+    compression = -1
+    editor = nano
 
 [color]
     branch = auto
