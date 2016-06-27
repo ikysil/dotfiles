@@ -137,3 +137,5 @@ function rse(){
 }
 
 export EDITOR=nano
+
+export MAVEN_OPTS="-XX:MaxPermSize=512M"
