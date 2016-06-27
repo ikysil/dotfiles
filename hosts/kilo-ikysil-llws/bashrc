@@ -138,4 +138,5 @@ function rse(){
 
 export EDITOR=nano
 
+export M2_HOME=~/bin/apache-maven-3.3.9
 export MAVEN_OPTS="-XX:MaxPermSize=512M"
