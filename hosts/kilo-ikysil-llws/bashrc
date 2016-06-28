@@ -139,3 +139,7 @@ function rse(){
 export EDITOR=nano
 
 export M2_HOME=~/bin/apache-maven-3.3.9
+
+if [ -f ~/.tmuxinator.d/tmuxinator.bash ]; then
+  source ~/.tmuxinator.d/tmuxinator.bash
+fi
