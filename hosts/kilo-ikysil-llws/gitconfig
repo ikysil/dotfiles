@@ -8,3 +8,109 @@
 [user]
     name = Illya Kysil
     email = illya.kysil@arhs-developments.com
+
+[alias]
+    ##
+    # Git aliases suitable for topic branches.
+    #
+    # These aliases are simple starting points for a simple topic flow.
+    # Lots of people have lots of ideas about how to do various git flows.
+    #
+    # Some people like to use a topic branch for a new feature, or a
+    # hotfix patch, or refactoring work, or some spike research, etc.
+    # Adjust these as you like, to suit your project and/or team.
+    ##
+
+    ##
+    # Start a topic branch.
+    #
+    # Example:
+    #
+    #     git topic-start hello
+    #
+    # This implementatation does these steps:
+    #
+    #   1. Update the develop branch
+    #   2. Create a new branch with your topic name and based on the develop branch
+    #
+    # Customize this for your own workflow preferences.
+    #
+    # If you use any kind of testing framework, or test driven development,
+    # then it can be wise to test your topic immediately after running this,
+    # to ensure that your branch starts with all the tests succeeding.
+    ##
+
+    topic-start = "!f(){ branch=$1; git checkout develop; git fetch; git rebase; git checkout -b "$branch" develop; };f"
+
+    ##
+    # Update the current topic branch by pulling changes.
+    #
+    # Example:
+    #
+    #     git topic-pull
+    #
+    # This implementatation does these:
+    #
+    #   1. Update the develop branch
+    #   2. Update the topic branch with any changes from the develop branch
+    #
+    # Customize this for your own workflow preferences.
+    #
+    # If you use any kind of testing framework, or test driven development,
+    # then it can be wise to test your topic immediately after running this,
+    # to ensure that any available updates are successfully integrated.
+    ##
+
+    topic-pull = "!f(){ branch=$(git branch-name); git checkout develop; git pull; git checkout "$branch"; git rebase develop; };f"
+
+    ##
+    # Update the current topic branch by pushing changes.
+    #
+    # Example:
+    #
+    #     git topic-push
+    #
+    # This implementatation does these:
+    #
+    #   1. Push the topic branch to the origin.
+    #   2. Set the upstream tracking.
+    #
+    # Customize this for your own workflow preferences.
+    #
+    # If you use a sharing site such a GitHub, and use typical settings,
+    # then this implementation makes your branch visible to collaborators.
+    #
+    # Many teams share branches before they are fully ready, to help
+    # the team provide feedback on the work-in-progress.
+    ##
+
+    topic-push = "!f(){ branch=$(git branch-name); git push -u origin "$branch"; };f"
+
+    ##
+    # Finish the current topic branch.
+    #
+    # Example:
+    #
+    #     git topic-finish
+    #
+    # This implementatation does these:
+    #
+    #   1. Delete the topic branch locally.
+    #   2. Delete the topic branch remotely.
+    #
+    # Customize this for your own workflow preferences.
+    #
+    # If you use a sharing site such a GitHub, and use typical settings,
+    # then this implementation deletes your branch for the site.
+    #
+    # Many teams choose to delete topic branches when they are finished,
+    # to keep the repositories clean and with a smaller number of branches.
+    #
+    # If git says "unable to push to unqualified destination" then it means
+    # that the remote branch doesn't exist, so git is unable to delete it.
+    # That's fine; it means someone else has already deleted the branch.
+    # To synchronize your branch list, use "git fetch --prune".
+    ##
+
+    topic-finish = "!f(){ branch=$(git branch-name); git checkout develop; git branch -d "$branch"; git push origin ":$branch"; };f"
+

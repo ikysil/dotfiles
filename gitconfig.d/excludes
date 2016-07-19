@@ -8,6 +8,8 @@ private/
 
 .idea/
 *.iml
+*.ipr
+*.iws
 
 *.log
 *.class
