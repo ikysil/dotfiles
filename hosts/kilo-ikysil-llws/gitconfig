@@ -114,3 +114,5 @@
 
     topic-finish = "!f(){ branch=$(git branch-name); git checkout develop; git branch -d "$branch"; git push origin ":$branch"; };f"
 
+[credential "https://git.local.proxy.custdev.aris-lux.lan"]
+    username = kysilil
