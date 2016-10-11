@@ -9,6 +9,10 @@
     name = Illya Kysil
     email = illya.kysil@arhs-developments.com
 
+[merge]
+    tool=meld
+
+
 [alias]
     ##
     # Git aliases suitable for topic branches.
@@ -116,3 +120,12 @@
 
 [credential "https://git.local.proxy.custdev.aris-lux.lan"]
     username = kysilil
+
+[gitflow "prefix"]
+        feature = feature-
+        bugfix = bugfix-
+        release = release-
+        hotfix = hotfix-
+        support = support-
+        versiontag =
+
