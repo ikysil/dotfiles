@@ -22,17 +22,17 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # don't run unless we're being invoked from an xwindows session
-if [[ -n ${DISPLAY} ]]; then
-    device1="ImPS\/2 Generic Wheel Mouse"
-    device2="ImPS\/2 BYD TouchPad"
-
-    id1=$(xinput | awk -F= "/$device1.*pointer/ {print \$2}" | cut -f1)
-    id2=$(xinput | awk -F= "/$device2.*pointer/ {print \$2}" | cut -f1)
-
-    if [[ -n "${id1}" ]]; then
-        xinput set-prop "${id1}" "Evdev Scrolling Distance" -1 1 1
-    fi
-    if [[ -n "${id2}" ]]; then
-        xinput set-prop "${id2}" "Evdev Scrolling Distance" -1 1 1
-    fi
-fi
+#if [[ -n ${DISPLAY} ]]; then
+#    device1="ImPS\/2 Generic Wheel Mouse"
+#    device2="ImPS\/2 BYD TouchPad"
+#
+#    id1=$(xinput | awk -F= "/$device1.*pointer/ {print \$2}" | cut -f1)
+#    id2=$(xinput | awk -F= "/$device2.*pointer/ {print \$2}" | cut -f1)
+#
+#    if [[ -n "${id1}" ]]; then
+#        xinput set-prop "${id1}" "Evdev Scrolling Distance" -1 1 1
+#    fi
+#    if [[ -n "${id2}" ]]; then
+#        xinput set-prop "${id2}" "Evdev Scrolling Distance" -1 1 1
+#    fi
+#fi

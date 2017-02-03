@@ -26,8 +26,9 @@ private/
 # maven versions plugin
 pom.xml.versionsBackup
 
-.gradle
+.gradle/
 
+nbproject/
 nbactions.xml
 nb-configuration.xml
 

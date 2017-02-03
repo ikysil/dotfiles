@@ -11,7 +11,7 @@
 
 [merge]
     tool=meld
-
+    renamelimit=16384
 
 [alias]
     ##
@@ -119,6 +119,9 @@
     topic-finish = "!f(){ branch=$(git branch-name); git checkout develop; git branch -d "$branch"; git push origin ":$branch"; };f"
 
 [credential "https://git.local.proxy.custdev.aris-lux.lan"]
+    username = kysilil
+
+[credential "https://dgtaxud-custdev-git.arhs-developments.com"]
     username = kysilil
 
 [gitflow "prefix"]
