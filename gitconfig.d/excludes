@@ -26,9 +26,13 @@ private/
 # maven versions plugin
 pom.xml.versionsBackup
 
+# Git merge artifacts
+*.orig
+
 .gradle/
 
 nbproject/
-nbactions.xml
+nbactions*.xml
 nb-configuration.xml
 
+.vscode/
