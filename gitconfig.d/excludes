@@ -34,6 +34,10 @@ pom.xml.versionsBackup
 nbproject/
 nbactions*.xml
 nb-configuration.xml
+nbproject/private/
+
+.vscode/
+.vagrant/
 
 .vscode/
 
