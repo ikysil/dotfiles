@@ -117,16 +117,18 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-    if [ -f /usr/share/bash-completion/bash_completion ]; then
-        . /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
-        . /etc/bash_completion
-    fi
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
 fi
 
 #search in history with arrows
 bind '"\e[A": history-search-backward' 2>/dev/null
 bind '"\e[B": history-search-forward' 2>/dev/null
+
+[ -d ~/bin ] && export PATH=$PATH:~/bin
 
 # Red STDERR
 # rse <command string>
@@ -145,3 +147,9 @@ export SW_ORG=~/sw-org
 if [ -f ~/.tmuxinator.d/tmuxinator.bash ]; then
     source ~/.tmuxinator.d/tmuxinator.bash
 fi
+
+# Load user completion scripts in ~/.bash_completion.d
+while IFS= read -r path; do
+    . "$path"
+done < <(find -L ~/.bash_completion.d -type f)
+

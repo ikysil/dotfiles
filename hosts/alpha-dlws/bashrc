@@ -109,3 +109,13 @@ function rse(){
 }
 
 export EDITOR=nano
+
+if [ -f ~/.tmuxinator.d/tmuxinator.bash ]; then
+    source ~/.tmuxinator.d/tmuxinator.bash
+fi
+
+# Load user completion scripts in ~/.bash_completion.d
+while IFS= read -r path; do
+    . "$path"
+done < <(find -L ~/.bash_completion.d -type f)
+
