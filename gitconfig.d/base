@@ -3,6 +3,7 @@
     attributesfile = ~/.gitconfig.d/attributes
     compression = -1
     editor = nano
+    whitespace = blank-at-eol,blank-at-eof,space-before-tab,tab-in-indent
 
 [color]
     branch = auto
@@ -19,6 +20,13 @@
 
 [push]
     default = upstream
+
+[diff]
+    renames = copies
+    mnemonicprefix = true
+
+[merge]
+    stat = true
 
 [http]
     sslverify = false

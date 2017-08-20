@@ -36,3 +36,8 @@ nbactions*.xml
 nb-configuration.xml
 
 .vscode/
+
+# Scratch area in Maven projects
+.scratch/
+
+.attach_pid*
