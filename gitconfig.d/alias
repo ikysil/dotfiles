@@ -78,8 +78,11 @@
     # cherry-pick - apply the changes introduced by some existing commits; useful for moving small chunks of code between branches.
     cp = cherry-pick
 
+    # cherry-pick and when when recording the commit, append a line that says "(cherry picked from commit ...)"
+    cpx = cherry-pick -sx
+
     # cherry-pick without making a commit, and when when recording the commit, append a line that says "(cherry picked from commit ...)"
-    cp-nx = cherry-pick --no-commit -x
+    cpnx = cherry-pick --no-commit -sx
 
     ### diff ###
 

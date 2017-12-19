@@ -16,7 +16,7 @@ set histappend
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-HISTIGNORE='&:bg:fg:cd*:clear:ls*:pwd:history:exit:make*:* --help:git ssb:git status:git log*:git lg:mc*'
+HISTIGNORE='&:bg:fg:cd*:clear:reset:pwd:history:exit:make*:* --help:git ssb:git status:git log:git lg:mc*'
 HISTTIMEFORMAT="%y-%m-%d - %H:%M:%S "
 
 # append to the history file, don't overwrite it
@@ -153,3 +153,7 @@ while IFS= read -r path; do
     . "$path"
 done < <(find -L ~/.bash_completion.d -type f)
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/ikysil/.sdkman"
+[[ -s "/home/ikysil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ikysil/.sdkman/bin/sdkman-init.sh"
