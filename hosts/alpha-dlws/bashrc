@@ -119,3 +119,7 @@ while IFS= read -r path; do
     . "$path"
 done < <(find -L ~/.bash_completion.d -type f)
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/ikysil/.sdkman"
+[[ -s "/home/ikysil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ikysil/.sdkman/bin/sdkman-init.sh"
