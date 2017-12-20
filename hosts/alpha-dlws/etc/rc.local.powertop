@@ -1,0 +1,106 @@
+#!/bin/sh -e
+#
+# rc.local.powertop
+
+# WA for https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1237058
+# Computer freezes after resume
+echo 0 > /sys/power/pm_async
+
+#VM writeback timeout
+echo '1500' > '/proc/sys/vm/dirty_writeback_centisecs';
+#Enable SATA link power management for host0
+echo 'min_power' > '/sys/class/scsi_host/host0/link_power_management_policy';
+##Enable SATA link power management for host3
+echo 'min_power' > '/sys/class/scsi_host/host3/link_power_management_policy';
+#Enable SATA link power management for host1
+echo 'min_power' > '/sys/class/scsi_host/host1/link_power_management_policy';
+#Enable SATA link power management for host2
+echo 'min_power' > '/sys/class/scsi_host/host2/link_power_management_policy';
+#Enable Audio codec power management
+echo '1' > '/sys/module/snd_hda_intel/parameters/power_save';
+#NMI watchdog should be turned off
+echo '0' > '/proc/sys/kernel/nmi_watchdog';
+#Runtime PM for I2C Adapter i2c-7 (SMBus PIIX4 adapter port 0 at 0b00)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-7/device/power/control';
+#Autosuspend for USB device USB Receiver [Logitech]
+#echo 'auto' > '/sys/bus/usb/devices/3-3/power/control';
+#Autosuspend for USB device SuperMulti RW [HLDS Inc]
+echo 'auto' > '/sys/bus/usb/devices/2-4/power/control';
+#Autosuspend for USB device MT1956 [MediaTek Inc]
+echo 'auto' > '/sys/bus/usb/devices/8-2/power/control';
+#Runtime PM for I2C Adapter i2c-10 (SMBus PIIX4 adapter port 4 at 0b00)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-10/device/power/control';
+#Runtime PM for I2C Adapter i2c-9 (SMBus PIIX4 adapter port 3 at 0b00)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-9/device/power/control';
+#Runtime PM for I2C Adapter i2c-0 (Radeon i2c bit bus 0x90)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-0/device/power/control';
+#Runtime PM for I2C Adapter i2c-4 (Radeon i2c bit bus 0x94)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-4/device/power/control';
+#Runtime PM for I2C Adapter i2c-8 (SMBus PIIX4 adapter port 2 at 0b00)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-8/device/power/control';
+#Runtime PM for I2C Adapter i2c-11 (SMBus PIIX4 adapter port 1 at 0b20)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-11/device/power/control';
+#Runtime PM for I2C Adapter i2c-1 (Radeon i2c bit bus 0x91)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-1/device/power/control';
+#Runtime PM for I2C Adapter i2c-2 (Radeon i2c bit bus 0x92)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-2/device/power/control';
+#Runtime PM for I2C Adapter i2c-3 (Radeon i2c bit bus 0x93)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-3/device/power/control';
+#Runtime PM for I2C Adapter i2c-5 (Radeon i2c bit bus 0x95)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-5/device/power/control';
+#Autosuspend for USB device Scarlett 2i4 USB [Focusrite]
+echo 'auto' > '/sys/bus/usb/devices/6-1/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH IDE Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.1/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH SATA Controller [AHCI mode]
+echo 'auto' > '/sys/bus/pci/devices/0000:00:11.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH Azalia Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.2/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH PCI Bridge
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.4/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Family 15h (Models 30h-3fh) Processor Function 0
+echo 'auto' > '/sys/bus/pci/devices/0000:00:18.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD/ATI] Kaveri HDMI/DP Audio Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:01.1/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Family 15h (Models 30h-3fh) Processor Function 2
+echo 'auto' > '/sys/bus/pci/devices/0000:00:18.2/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH USB XHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:10.1/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Device 1424
+echo 'auto' > '/sys/bus/pci/devices/0000:00:03.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH USB OHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:12.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Family 15h (Models 30h-3fh) Processor Function 4
+echo 'auto' > '/sys/bus/pci/devices/0000:00:18.4/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Family 15h (Models 30h-3fh) Processor Root Complex
+echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH USB EHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:12.2/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH USB OHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.5/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Device 1424
+echo 'auto' > '/sys/bus/pci/devices/0000:00:04.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.3/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Device 1424
+echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
+#Runtime PM for PCI Device Qualcomm Atheros QCA8171 Gigabit Ethernet
+echo 'auto' > '/sys/bus/pci/devices/0000:04:00.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Family 15h (Models 30h-3fh) Processor Function 5
+echo 'auto' > '/sys/bus/pci/devices/0000:00:18.5/power/control';
+#Runtime PM for PCI Device Etron Technology, Inc. EJ188/EJ198 USB 3.0 Host Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:03:00.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Family 15h (Models 30h-3fh) Processor Function 3
+echo 'auto' > '/sys/bus/pci/devices/0000:00:18.3/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH USB EHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:13.2/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH USB XHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:10.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] Family 15h (Models 30h-3fh) Processor Function 1
+echo 'auto' > '/sys/bus/pci/devices/0000:00:18.1/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD/ATI] Kaveri [Radeon R7 Graphics]
+echo 'auto' > '/sys/bus/pci/devices/0000:00:01.0/power/control';
+#Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH USB OHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:13.0/power/control';
