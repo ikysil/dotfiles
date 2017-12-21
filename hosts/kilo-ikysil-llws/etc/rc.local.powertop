@@ -6,58 +6,70 @@
 # Computer freezes after resume
 echo 0 > /sys/power/pm_async
 
-#Enable SATA link power management for host0
-echo 'min_power' > '/sys/class/scsi_host/host0/link_power_management_policy';
-#Enable SATA link power management for host1
-echo 'min_power' > '/sys/class/scsi_host/host1/link_power_management_policy';
-#Enable SATA link power management for host2
-echo 'min_power' > '/sys/class/scsi_host/host2/link_power_management_policy';
-#Enable Audio codec power management
-echo '1' > '/sys/module/snd_hda_intel/parameters/power_save';
-#Runtime PM for I2C Adapter i2c-0 (i915 gmbus dpc)
-echo 'auto' > '/sys/bus/i2c/devices/i2c-0/device/power/control';
-#Autosuspend for USB device USB Receiver [Logitech]
+# Autosuspend for USB device Kensington Eagle Trackball [Primax]
+#echo 'auto' > '/sys/bus/usb/devices/1-6.2/power/control';
+# Autosuspend for USB device USB Optical Mouse [Logitech]
+#echo 'auto' > '/sys/bus/usb/devices/1-5.2/power/control';
+# Autosuspend for USB device USB Receiver [Logitech]
+#echo 'auto' > '/sys/bus/usb/devices/1-6.1/power/control';
+# Autosuspend for USB device USB Receiver [Logitech]
 #echo 'auto' > '/sys/bus/usb/devices/1-1/power/control';
-#Runtime PM for I2C Adapter i2c-1 (i915 gmbus dpb)
-echo 'auto' > '/sys/bus/i2c/devices/i2c-1/device/power/control';
-#Runtime PM for I2C Adapter i2c-2 (i915 gmbus dpd)
-echo 'auto' > '/sys/bus/i2c/devices/i2c-2/device/power/control';
-#Runtime PM for PCI Device Intel Corporation 82801 Mobile SATA Controller [RAID mode]
-echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP Thermal subsystem
-echo 'auto' > '/sys/bus/pci/devices/0000:00:14.2/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP USB 3.0 xHCI Controller
-echo 'auto' > '/sys/bus/pci/devices/0000:00:14.0/power/control';
-#Runtime PM for PCI Device Intel Corporation HD Graphics 520
-echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Device 9d1a
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1d.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Device 9d3d
-echo 'auto' > '/sys/bus/pci/devices/0000:00:16.3/power/control';
-#Runtime PM for PCI Device Intel Corporation Ethernet Connection I219-LM
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
-#Runtime PM for PCI Device Intel Corporation Skylake Host Bridge/DRAM Registers
-echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP HD Audio
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.3/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP SMBus
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.4/power/control';
-#Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTS525A PCI Express Card Reader
-echo 'auto' > '/sys/bus/pci/devices/0000:03:00.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PCI Express Root Port #5
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1c.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP LPC Controller
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Device 093c
-echo 'auto' > '/sys/bus/pci/devices/0000:02:00.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Skylake Processor Thermal Subsystem
-echo 'auto' > '/sys/bus/pci/devices/0000:00:04.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PCI Express Root Port #6
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1c.5/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP CSME HECI #1
-echo 'auto' > '/sys/bus/pci/devices/0000:00:16.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Wireless 8260
-echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
-#Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PMC
-echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.2/power/control';
 
+# Enable Audio codec power management
+echo '1' > '/sys/module/snd_hda_intel/parameters/power_save';
+# Enable SATA link power management for host0
+echo 'min_power' > '/sys/class/scsi_host/host0/link_power_management_policy';
+# Enable SATA link power management for host1
+echo 'min_power' > '/sys/class/scsi_host/host1/link_power_management_policy';
+# Enable SATA link power management for host2
+echo 'min_power' > '/sys/class/scsi_host/host2/link_power_management_policy';
+# Runtime PM for I2C Adapter i2c-0 (i915 gmbus dpc)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-0/device/power/control';
+# Runtime PM for I2C Adapter i2c-1 (i915 gmbus dpb)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-1/device/power/control';
+# Runtime PM for I2C Adapter i2c-2 (i915 gmbus dpd)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-2/device/power/control';
+# Runtime PM for I2C Adapter i2c-5 (DPMST)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-5/device/power/control';
+# Runtime PM for I2C Adapter i2c-6 (DPMST)
+echo 'auto' > '/sys/bus/i2c/devices/i2c-6/device/power/control';
+# Runtime PM for PCI Device Intel Corporation 82801 Mobile SATA Controller [RAID mode]
+echo 'auto' > '/sys/bus/pci/devices/0000:00:17.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Device 093c
+echo 'auto' > '/sys/bus/pci/devices/0000:02:00.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Device 9d1a
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1d.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Device 9d3d
+echo 'auto' > '/sys/bus/pci/devices/0000:00:16.3/power/control';
+# Runtime PM for PCI Device Intel Corporation Ethernet Connection I219-LM
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.6/power/control';
+# Runtime PM for PCI Device Intel Corporation HD Graphics 520
+echo 'auto' > '/sys/bus/pci/devices/0000:00:02.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Skylake Host Bridge/DRAM Registers
+echo 'auto' > '/sys/bus/pci/devices/0000:00:00.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Skylake Processor Thermal Subsystem
+echo 'auto' > '/sys/bus/pci/devices/0000:00:04.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP CSME HECI #1
+echo 'auto' > '/sys/bus/pci/devices/0000:00:16.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP HD Audio
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.3/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP LPC Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PCI Express Root Port #5
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1c.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PCI Express Root Port #6
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1c.5/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP PMC
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.2/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP SMBus
+echo 'auto' > '/sys/bus/pci/devices/0000:00:1f.4/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP Thermal subsystem
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.2/power/control';
+# Runtime PM for PCI Device Intel Corporation Sunrise Point-LP USB 3.0 xHCI Controller
+echo 'auto' > '/sys/bus/pci/devices/0000:00:14.0/power/control';
+# Runtime PM for PCI Device Intel Corporation Wireless 8260
+echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
+# Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTS525A PCI Express Card Reader
+echo 'auto' > '/sys/bus/pci/devices/0000:03:00.0/power/control';
+# Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTS525A PCI Express Card Reader
+echo 'auto' > '/sys/bus/pci/devices/0000:03:00.0/power/control';
