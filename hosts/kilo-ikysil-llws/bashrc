@@ -104,6 +104,33 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+alias orjdk7='JAVA_HOME=/usr/lib/jvm/java-7-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=$PATH:${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin
+    DERBY_HOME=${JAVA_HOME}/db
+'
+alias orjdk8='JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=$PATH:${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin
+    DERBY_HOME=${JAVA_HOME}/db
+'
+alias orjdk9='JAVA_HOME=/usr/lib/jvm/java-9-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=$PATH:${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin
+    DERBY_HOME=${JAVA_HOME}/db
+'
+alias opjdk8='JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=$PATH:${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin
+    DERBY_HOME=${JAVA_HOME}/db
+'
+alias mvnci='mvn clean install'
+alias mvni='mvn install'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -130,6 +157,8 @@ bind '"\e[B": history-search-forward' 2>/dev/null
 
 [ -d ~/bin ] && export PATH=$PATH:~/bin
 
+[ -d /home/linuxbrew/.linuxbrew ] && export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+
 # Red STDERR
 # rse <command string>
 function rse(){
@@ -139,8 +168,6 @@ function rse(){
 }
 
 export EDITOR=nano
-
-export M2_HOME=~/bin/apache-maven-3.3.9
 
 export SW_ORG=~/sw-org
 
