@@ -259,6 +259,9 @@
     # status with short format and showing branch and tracking info.
     ssb = status --short --branch
 
+    # summary status for top-level directories
+    ssd = !"git status --short  | sed -e "s/[/].*//" | sort -u -k 2 -k 1"
+
     ### INSPECTION ALIASES ###
 
     # Show our defined aliases
