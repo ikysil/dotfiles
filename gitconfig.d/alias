@@ -162,6 +162,8 @@
     #
     pr = pull --rebase
 
+    prs = !"git fetch && git rebase --autostash FETCH_HEAD"
+
     ### rebase ###
 
     # rebase - forward-port local commits to the updated upstream head.
@@ -260,7 +262,7 @@
     ssb = status --short --branch
 
     # summary status for top-level directories
-    ssd = !"git status --short  | sed -e "s/[/].*//" | sort -u -k 2 -k 1"
+    ssd = !"git status --short | sed -e 's/[/].*//' | sort -u -k 2 -k 1 #"
 
     ### INSPECTION ALIASES ###
 

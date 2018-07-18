@@ -45,3 +45,5 @@ nbproject/private/
 .scratch/
 
 .attach_pid*
+
+.repo/
