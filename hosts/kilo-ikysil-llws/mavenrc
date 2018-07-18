@@ -1,1 +1,1 @@
-export MAVEN_OPTS="-XX:MaxPermSize=512M $MAVEN_OPTS"
+#export MAVEN_OPTS="-XX:MaxPermSize=512M $MAVEN_OPTS"

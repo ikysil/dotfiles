@@ -1,0 +1,48 @@
+# ~/.bash_aliases
+
+alias resetjdkpath='
+    PATH=`echo $PATH | sed -Ee 's/[/]usr[/]lib[/]jvm[^:]+//g' | sed -Ee 's/:+/:/g'`
+'
+
+alias orjdk7='
+    resetjdkpath
+    JAVA_HOME=/usr/lib/jvm/java-7-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias orjdk8='
+    resetjdkpath
+    JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias orjdk9='
+    resetjdkpath
+    JAVA_HOME=/usr/lib/jvm/java-9-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias opjdk8='
+    resetjdkpath
+    JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias mvnci='mvn clean install'
+alias mvni='mvn install'
