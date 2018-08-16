@@ -50,6 +50,8 @@ echo 'auto' > '/sys/bus/i2c/devices/i2c-3/device/power/control';
 echo 'auto' > '/sys/bus/i2c/devices/i2c-5/device/power/control';
 #Autosuspend for USB device Scarlett 2i4 USB [Focusrite]
 echo 'auto' > '/sys/bus/usb/devices/6-1/power/control';
+#Autosuspend for USB device Logitech, Inc. HD Pro Webcam C920
+echo 'on' > '/sys/bus/usb/devices/6-2/power/control';
 #Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH IDE Controller
 echo 'auto' > '/sys/bus/pci/devices/0000:00:14.1/power/control';
 #Runtime PM for PCI Device Advanced Micro Devices, Inc. [AMD] FCH SATA Controller [AHCI mode]

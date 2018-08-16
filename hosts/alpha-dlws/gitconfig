@@ -8,3 +8,5 @@
 [user]
     name = Illya Kysil
     email = ikysil@ikysil.name
+[color]
+	ui = auto
