@@ -11,6 +11,17 @@
     name = Illya Kysil
     email = illya.kysil@arhs-developments.com
 
-[user]
-    name = Illya Kysil
-    email = illya.kysil@arhs-developments.com
+[credential "https://git.local.proxy.custdev.aris-lux.lan"]
+    username = kysilil
+
+[credential "https://dgtaxud-custdev-git.arhs-developments.com"]
+    username = kysilil
+
+[gitflow "prefix"]
+    feature = feature-
+    bugfix = bugfix-
+    release = release-
+    hotfix = hotfix-
+    support = support-
+    versiontag =
+
