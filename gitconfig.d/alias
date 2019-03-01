@@ -57,6 +57,10 @@
     # branch and only list branches whose tips are not reachable from the specified commit (HEAD if not specified).
     bnm = branch --no-merged
 
+    # branch - remove merged branch
+    brd = branch -d
+    brdf = branch -D
+
     ### commit ###
 
     # commit - amend the tip of the current branch rather than creating a new commit.
@@ -72,6 +76,9 @@
 
     # checkout - update the working tree to match a branch or paths. [same as "o" for "out"]
     co = checkout
+
+    # checkout and create new branch
+    cb = checkout -b
 
     ### cherry-pick ###
 
@@ -435,8 +442,12 @@
     ### WORKFLOW ALIASES ###
 
     # Stash aliases
-    save = !git stash save
-    pop = !git stash pop
+    stl = stash list
+    std = stash drop
+    stpu = stash push
+    stpuki = stash push --keep-index
+    stpo = stash pop
+    stap = stash apply
 
     # Stash snapshot - from http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
     # Take a snapshot of your current working tree without removing changes.

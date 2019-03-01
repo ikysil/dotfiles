@@ -27,6 +27,7 @@
 [diff]
     renames = copies
     mnemonicprefix = true
+    renameLimit = 131072
 
 [merge]
     stat = true

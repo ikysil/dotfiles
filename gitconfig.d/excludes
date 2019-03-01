@@ -5,6 +5,7 @@ private/
 .settings/
 .project
 .classpath
+.factorypath
 
 .idea/
 *.iml
@@ -22,6 +23,7 @@ private/
 !*.war/
 
 *~
+.~*
 
 # maven versions plugin
 pom.xml.versionsBackup
