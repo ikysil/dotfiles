@@ -1,11 +1,12 @@
 # ~/.bash_aliases
 
-alias resetjdkpath='
+alias resetjdkenv='
+    unset -v JAVA_HOME J2SDKDIR J2REDIR DERBY_HOME
     PATH=`echo $PATH | sed -Ee 's/[/]usr[/]lib[/]jvm[^:]+//g' | sed -Ee 's/:+/:/g'`
 '
 
 alias orjdk7='
-    resetjdkpath
+    resetjdkenv
     JAVA_HOME=/usr/lib/jvm/java-7-oracle
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
@@ -15,7 +16,7 @@ alias orjdk7='
 '
 
 alias orjdk8='
-    resetjdkpath
+    resetjdkenv
     JAVA_HOME=/usr/lib/jvm/java-8-oracle
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
@@ -24,8 +25,18 @@ alias orjdk8='
     java -version
 '
 
+alias orjdk8_u91='
+    resetjdkenv
+    JAVA_HOME=/usr/lib/jvm/jdk1.8.0_91
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
 alias orjdk9='
-    resetjdkpath
+    resetjdkenv
     JAVA_HOME=/usr/lib/jvm/java-9-oracle
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
@@ -35,7 +46,7 @@ alias orjdk9='
 '
 
 alias opjdk8='
-    resetjdkpath
+    resetjdkenv
     JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
@@ -44,5 +55,17 @@ alias opjdk8='
     java -version
 '
 
+alias opjdk11='
+    resetjdkenv
+    JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    J2SDKDIR=${JAVA_HOME}
+    PATH=${JAVA_HOME}/bin:$PATH
+    java -version
+'
+
 alias mvnci='mvn clean install'
 alias mvni='mvn install'
+
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
