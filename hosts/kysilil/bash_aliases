@@ -1,0 +1,63 @@
+# ~/.bash_aliases
+
+alias resetjdkenv='
+    unset -v JAVA_HOME J2SDKDIR J2REDIR DERBY_HOME
+    NEW_PATH=`echo $PATH | sed -Ee 's/[/][^:]+[/]jdk[^:]+//g' | sed -Ee 's/:+/:/g'`
+    #echo ${NEW_PATH}
+    PATH=${NEW_PATH}
+'
+
+alias orjdk7='
+    resetjdkenv
+    JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_80"
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias orjdk8='
+    resetjdkenv
+    JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.8.0_212"
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias orjdk8_181='
+    resetjdkenv
+    JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.8.0_181"
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias opjdk8='
+    resetjdkenv
+    JAVA_HOME="/cygdrive/c/Program Files/AdoptOpenJDK/jdk-8.0.212.04-hotspot"
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias opjdk11='
+    resetjdkenv
+    JAVA_HOME="/cygdrive/c/Program Files/AdoptOpenJDK/jdk-11.0.3.7-hotspot"
+    J2SDKDIR=${JAVA_HOME}
+    PATH=${JAVA_HOME}/bin:$PATH
+    java -version
+'
+
+alias mvnci='mvn clean install'
+alias mvni='mvn install'
+
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
