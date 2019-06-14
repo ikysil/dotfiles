@@ -120,8 +120,6 @@ function rse(){
 
 export EDITOR=nano
 
-export MAVEN_OPTS="-XX:MaxPermSize=512M"
-
 export CHERE_INVOKING=1
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
