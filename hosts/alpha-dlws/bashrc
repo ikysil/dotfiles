@@ -99,6 +99,7 @@ bind '"\e[A": history-search-backward' 2>/dev/null
 bind '"\e[B": history-search-forward' 2>/dev/null
 
 [ -d ~/bin ] && export PATH=$PATH:~/bin
+[ -f ~/.cargo/env ] && source ~/.cargo/env
 
 # Red STDERR
 # rse <command string>
