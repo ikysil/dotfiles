@@ -128,12 +128,12 @@
     username = kysilil
 
 [gitflow "prefix"]
-        feature = feature-
-        bugfix = bugfix-
-        release = release-
-        hotfix = hotfix-
-        support = support-
-        versiontag =
+    feature = feature-
+    bugfix = bugfix-
+    release = release-
+    hotfix = hotfix-
+    support = support-
+    versiontag =
 
 [color]
 	ui = auto

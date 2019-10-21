@@ -1,1 +1,4 @@
-registry=https://dgtaxud-custdev-docker.arhs-developments.com/repository/cd3-npm-group
+@cd-commons-ui:registry=https://dgtaxud-custdev-docker.arhs-developments.com/repository/cd3-npm-group
+@infiltrator:registry=https://dgtaxud-custdev-docker.arhs-developments.com/repository/cd3-npm-group
+@eui:registry=https://dgtaxud-custdev-docker.arhs-developments.com/repository/cd3-npm-group
+registry=https://registry.npmjs.org
