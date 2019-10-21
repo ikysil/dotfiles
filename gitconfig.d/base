@@ -17,6 +17,7 @@
 
 [branch]
     autosetuprebase = always
+    autosetupmerge = true
 
 [fetch]
     prune = true
