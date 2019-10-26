@@ -1,5 +1,8 @@
 # ~/.bash_aliases
 
+alias 'ls'='exa'
+alias 'cat'='bat'
+
 alias resetjdkenv='
     unset -v JAVA_HOME J2SDKDIR J2REDIR DERBY_HOME
     PATH=`echo $PATH | sed -Ee 's/[/]usr[/]lib[/]jvm[^:]+//g' | sed -Ee 's/:+/:/g'`
