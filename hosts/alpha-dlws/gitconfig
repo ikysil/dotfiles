@@ -10,3 +10,5 @@
     email = ikysil@ikysil.name
 [color]
 	ui = auto
+[sequence]
+	editor = interactive-rebase-tool
