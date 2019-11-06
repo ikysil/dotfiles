@@ -4,6 +4,7 @@
 
 [core]
     autocrlf = input
+	pager = delta --dark
 
 [user]
     name = Illya Kysil
@@ -137,3 +138,5 @@
 
 [color]
 	ui = auto
+[sequence]
+	editor = interactive-rebase-tool
