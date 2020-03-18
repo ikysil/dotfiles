@@ -162,3 +162,5 @@ export SDKMAN_DIR="/home/ikysil/.sdkman"
 [[ -s "/home/ikysil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ikysil/.sdkman/bin/sdkman-init.sh"
 
 eval "$(starship init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

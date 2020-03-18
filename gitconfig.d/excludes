@@ -49,3 +49,4 @@ nbproject/private/
 .attach_pid*
 
 .repo/
+.ionide/
