@@ -22,11 +22,4 @@ if [ -d "$HOME/.cargo/bin" ] ; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-# set PATH so it includes linuxbrew bin if it exists
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
-	PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-	export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-	export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
-fi
-
 export PATH
