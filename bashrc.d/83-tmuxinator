@@ -1,0 +1,3 @@
+if [ -f ~/.tmuxinator.d/tmuxinator.bash ]; then
+    source ~/.tmuxinator.d/tmuxinator.bash
+fi

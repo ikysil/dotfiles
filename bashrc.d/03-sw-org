@@ -1,0 +1,6 @@
+if [ -d ~/sw-org ]; then
+    export SW_ORG=~/sw-org
+else
+    unset SW_ORG
+fi
+
