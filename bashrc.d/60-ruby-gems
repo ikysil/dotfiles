@@ -1,1 +1,3 @@
-export PATH="`gem environment gempath`:$PATH"
+GEMPATH=$(set -f; IFS=:; printf ":%s/bin" `gem environment gempath`)
+
+export PATH="$GEMPATH:$PATH"
