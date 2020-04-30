@@ -100,4 +100,4 @@ export EDITOR=nano
 # Load user bashrc scripts in ~/.bashrc.d
 while IFS= read -r path; do
     . "$path"
-done < <(find -L ~/.bashrc.d -type f)
+done < <(find -L ~/.bashrc.d -type f | sort)
