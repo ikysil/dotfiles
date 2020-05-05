@@ -9,7 +9,7 @@ alias resetjdkenv='
 
 alias orjdk7='
     resetjdkenv
-    JAVA_HOME="`cygpath /c/Program\ Files/Java/jdk1.7.0_80`"
+    JAVA_HOME="`cygpath c:/Program\ Files/Java/jdk1.7.0_80`"
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
     PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
@@ -19,7 +19,7 @@ alias orjdk7='
 
 alias orjdk8='
     resetjdkenv
-    JAVA_HOME="`cygpath /c/Program\ Files/Java/jdk1.8.0_212`"
+    JAVA_HOME="`cygpath c:/Program\ Files/Java/jdk1.8.0_212`"
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
     PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
@@ -29,7 +29,7 @@ alias orjdk8='
 
 alias orjdk8_181='
     resetjdkenv
-    JAVA_HOME="`cygpath /c/Program\ Files/Java/jdk1.8.0_181`"
+    JAVA_HOME="`cygpath c:/Program\ Files/Java/jdk1.8.0_181`"
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
     PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
@@ -39,7 +39,7 @@ alias orjdk8_181='
 
 alias opjdk8='
     resetjdkenv
-    JAVA_HOME="`cygpath /c/Program\ Files/AdoptOpenJDK/jdk-8.0.212.04-hotspot`"
+    JAVA_HOME="`cygpath c:/Program\ Files/AdoptOpenJDK/jdk-8.0.212.04-hotspot`"
     J2SDKDIR=${JAVA_HOME}
     J2REDIR=${JAVA_HOME}/jre
     PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
@@ -49,7 +49,7 @@ alias opjdk8='
 
 alias opjdk11='
     resetjdkenv
-    JAVA_HOME="`cygpath /c/Program\ Files/AdoptOpenJDK/jdk-11.0.3.7-hotspot`"
+    JAVA_HOME="`cygpath c:/Program\ Files/AdoptOpenJDK/jdk-11.0.3.7-hotspot`"
     J2SDKDIR=${JAVA_HOME}
     PATH=${JAVA_HOME}/bin:$PATH
     java -version
