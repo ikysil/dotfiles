@@ -122,6 +122,7 @@ export EDITOR=nano
 
 export CHERE_INVOKING=1
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/kysilil/.sdkman"
-[[ -s "/home/kysilil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/kysilil/.sdkman/bin/sdkman-init.sh"
+# Load user bashrc scripts in ~/.bashrc.d
+while IFS= read -r path; do
+    . "$path"
+done < <(find -L ~/.bashrc.d -type f | sort)

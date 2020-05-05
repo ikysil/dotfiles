@@ -1,11 +1,15 @@
-# Load user completion scripts in /home/linuxbrew/.linuxbrew/etc/bash_completion.d
-while IFS= read -r path; do
-    . "$path"
-done < <(find -L /home/linuxbrew/.linuxbrew/etc/bash_completion.d -type f)
+if [ -d "/home/linuxbrew/.linuxbrew" ] ; then
 
-# set PATH so it includes linuxbrew bin if it exists
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
-	PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-	export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
-	export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+	# Load user completion scripts in /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+	while IFS= read -r path; do
+		. "$path"
+	done < <(find -L /home/linuxbrew/.linuxbrew/etc/bash_completion.d -type f)
+
+	# set PATH so it includes linuxbrew bin if it exists
+	if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
+		PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+		export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+		export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+	fi
+
 fi
