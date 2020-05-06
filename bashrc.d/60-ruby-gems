@@ -1,4 +1,4 @@
-if command -v gem ; then
+if command -v gem  > /dev/null ; then
     GEMPATH=$(set -f; IFS=:; printf ":%s/bin" `gem environment gempath`)
     export PATH="$GEMPATH:$PATH"
 fi
