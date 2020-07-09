@@ -1,0 +1,36 @@
+# ~/.bash_aliases
+
+alias 'ls'='exa'
+alias 'cat'='bat'
+
+alias resetjdkenv='
+    unset -v JAVA_HOME J2SDKDIR J2REDIR DERBY_HOME
+    PATH=`echo $PATH | sed -Ee 's/[/]usr[/]lib[/]jvm[^:]+//g' | sed -Ee 's/:+/:/g'`
+'
+
+alias orjdk7='
+    resetjdkenv
+    JAVA_HOME=${HOME}/bin/jdk1.7.0_80-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias orjdk8='
+    resetjdkenv
+    JAVA_HOME=${HOME}/bin/jdk1.8.0_202-oracle
+    J2SDKDIR=${JAVA_HOME}
+    J2REDIR=${JAVA_HOME}/jre
+    PATH=${JAVA_HOME}/bin:${JAVA_HOME}/db/bin:${JAVA_HOME}/jre/bin:$PATH
+    DERBY_HOME=${JAVA_HOME}/db
+    java -version
+'
+
+alias mvnci='mvn clean install'
+alias mvni='mvn install'
+
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
