@@ -1,0 +1,28 @@
+[include]
+    path = ~/.gitconfig.d/base
+    path = ~/.gitconfig.d/alias
+
+[core]
+    autocrlf = input
+	pager = delta --dark
+
+[user]
+    name = Illya Kysil
+    email = illya.kysil@ume.solutions
+
+[merge]
+    tool=meld
+    renamelimit=16384
+
+[gitflow "prefix"]
+    feature = feature-
+    bugfix = bugfix-
+    release = release-
+    hotfix = hotfix-
+    support = support-
+    versiontag =
+
+[color]
+	ui = auto
+[sequence]
+	editor = interactive-rebase-tool

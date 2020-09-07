@@ -1,0 +1,8 @@
+# ~/.bash_aliases
+
+alias mvnci='mvn clean install'
+alias mvni='mvn install'
+
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
