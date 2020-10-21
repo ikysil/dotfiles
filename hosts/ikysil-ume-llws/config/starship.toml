@@ -65,7 +65,7 @@ style = "bold dimmed white"
 disabled = false
 
 [package]
-format = "via [🎁 $version](208 bold) "
+format = " via [🎁 $version](208 bold) "
 
 [python]
 format = "[$symbol$version]($style) "
