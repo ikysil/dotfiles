@@ -2,7 +2,6 @@
     excludesfile = ~/.gitconfig.d/excludes
     attributesfile = ~/.gitconfig.d/attributes
     compression = -1
-    editor = nano
     whitespace = blank-at-eol,blank-at-eof,space-before-tab,tab-in-indent
 
 [color]
