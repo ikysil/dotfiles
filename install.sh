@@ -28,7 +28,7 @@ function install_symlinks() {
 
   symlinks=$(find "$srcdir" -name "*.symlink")
   for file in $symlinks; do
-    source=${file#$HOME}
+    source='~'/${file#$HOME/}
     debug $source
     target=$HOME/$(echo "${file#$srcdir/}" | sed -e "s/dot_/./" | sed -e "s/.symlink//")
     debug $target
