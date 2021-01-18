@@ -8,13 +8,13 @@ set +e
 #set -x # debug
 
 function fail() {
-  echo "$@" > /dev/stderr
+  echo "$@" >/dev/stderr
   exit 1
 }
 
 function debug() {
   # echo "$@" > /dev/stderr
-  echo -n "" > /dev/null
+  echo -n "" >/dev/null
 }
 
 overwrite_all=false
