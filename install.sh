@@ -28,7 +28,7 @@ function install_symlinks() {
 
   symlinks=$(find "$srcdir" -name "*.symlink")
   for file in $symlinks; do
-    source='~'/${file#$HOME/}
+    source=${file#$HOME/}
     debug $source
     target=$HOME/$(echo "${file#$srcdir/}" | sed -e "s/dot_/./" | sed -e "s/.symlink//")
     debug $target
@@ -67,16 +67,16 @@ function install_symlinks() {
       fi
 
       if $overwrite || $overwrite_all; then
-        echo rm $target
+        rm $target
       fi
 
       if $backup || $backup_all; then
-        echo mv $target "$target.backup"
+        mv --backup=numbered "$target" "$target.backup"
       fi
     fi
 
     echo "Installing $target"
-    echo ln -s "$source" "$target"
+    ln -s "$source" "$target"
   done
 }
 
