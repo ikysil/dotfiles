@@ -34,7 +34,7 @@ function install_symlinks() {
   for file in $symlinks; do
     source=${file}
     debug $source
-    target=$HOME/$(echo "${file#$srcdir/}" | sed -e "s/dot_/./" | sed -e "s/.symlink//")
+    target=$HOME/$(echo "${file#$srcdir/}" | sed -e "s/dot_/./g" | sed -e "s/.symlink//")
     debug $target
 
     overwrite=false
