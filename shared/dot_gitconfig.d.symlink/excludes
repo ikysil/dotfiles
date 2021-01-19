@@ -8,6 +8,7 @@ private/
 .factorypath
 
 .idea/
+!.idea/scopes
 *.iml
 *.ipr
 *.iws
@@ -40,8 +41,6 @@ nbproject/private/
 
 .vscode/
 .vagrant/
-
-.vscode/
 
 # Scratch area in Maven projects
 .scratch/
