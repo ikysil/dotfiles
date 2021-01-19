@@ -75,7 +75,7 @@ function install_symlinks() {
       fi
 
       if $backup || $backup_all; then
-        mv --backup=numbered "$target" "$target.backup"
+        mv -T --backup=numbered "$target" "$target.backup"
       fi
     fi
 
