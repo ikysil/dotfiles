@@ -8,17 +8,21 @@ set +e
 #set -x # debug
 
 function fail() {
-  echo "$@" >/dev/stderr
+  echo "$@" 1>&2
   exit 1
 }
 
 function debug() {
-  # echo "$@" > /dev/stderr
+  # echo "$@"
   echo -n "" >/dev/null
 }
 
 overwrite_all=false
 backup_all=false
+
+function relpath() {
+  python3 -c "import os,sys;print(os.path.relpath(*(sys.argv[1:])))" "$@";
+}
 
 function install_symlinks() {
   srcdir="$1"
@@ -28,7 +32,7 @@ function install_symlinks() {
 
   symlinks=$(find "$srcdir" -name "*.symlink")
   for file in $symlinks; do
-    source=${file#$HOME/}
+    source=${file}
     debug $source
     target=$HOME/$(echo "${file#$srcdir/}" | sed -e "s/dot_/./" | sed -e "s/.symlink//")
     debug $target
@@ -76,7 +80,7 @@ function install_symlinks() {
     fi
 
     echo "Installing $target"
-    ln -s "$source" "$target"
+    ln -s "$(relpath "$source" $(dirname "$target"))" "$target"
   done
 }
 
