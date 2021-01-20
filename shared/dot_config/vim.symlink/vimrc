@@ -6,7 +6,7 @@ set showcmd
 set relativenumber
 set number
 syntax on
-colorscheme darkblue
+colorscheme codedark
 set tabstop=4
 set autoindent
 set expandtab
