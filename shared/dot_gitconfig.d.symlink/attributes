@@ -2,3 +2,6 @@
 
 # Auto detect text files and perform LF normalization
 # http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+
+*.sln text eol=crlf
+*.vcproj text eol=crlf
