@@ -27,8 +27,13 @@
 # Footer - Associated issues, PRs, etc.
 # ---------------------------------------------------------------------
 #    * Ex: Resolves Issue #207, see PR #15, etc.
+#
+#    BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:,
+#    or appends a ! after the type/scope, introduces a breaking
+#    API change (correlating with MAJOR in semantic versioning).
+#    A BREAKING CHANGE can be part of commits of any type.
 # -------10--------20--------30--------40--------50--------60--------70
-
+# BREAKING CHANGE:
 
 # ---------------------------------------------------------------------
 # Conventional Commits 1.0.0
