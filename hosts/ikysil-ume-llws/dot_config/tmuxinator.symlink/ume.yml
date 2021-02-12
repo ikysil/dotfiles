@@ -11,6 +11,7 @@ root: ~/workshop/ume
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
+  - export AWS_PROFILE=ume
   - sdk u java 8.282.08.1-amzn
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
@@ -30,26 +31,25 @@ pre_window:
 
 windows:
   - ume-main-web:
-    - cd ume-main-web
-    - git ssb
+      - cd ume-main-web
+      - git ssb
   - ume-technical-architecture:
-    - cd ume-technical-architecture
-    - git ssb
-    - code -n $PWD
+      - cd ume-technical-architecture
+      - git ssb
+      - code -n $PWD
   - ume-orientdb:
-    - docker start orientdb
-    - docker logs -f orientdb
+      - docker start orientdb
+      - docker logs -f orientdb
   - ume-web-client:
-    - cd ume-web-client
-    - git ssb
-    - code -n $PWD
+      - cd ume-web-client
+      - git ssb
+      - code -n $PWD
   - ume-api-client:
-    - cd ume-api-client
-    - git ssb
+      - cd ume-api-client
+      - git ssb
   - ume-automated-testing:
-    - cd ume-automated-testing
-    - git ssb
+      - cd ume-automated-testing
+      - git ssb
   - ume-performance-testing:
-    - cd ume-performance-testing
-    - git ssb
-
+      - cd ume-performance-testing
+      - git ssb
