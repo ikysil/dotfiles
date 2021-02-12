@@ -1,28 +1,36 @@
-# ----------------------------------------------------------
-# Header - (type): Brief description
-# ----------------------------------------------------------
-#   * feat         A new feature
-#   * fix          A bug fix
-#   * docs         Changes to documentation only
-#   * style        Style/format changes (whitespace, etc.)
-#   * refactor     Changes not related to a bug or feature
-#   * perf         Changes that affects performance
-#   * test         Changes that add/modify/correct tests
-#   * build        Changes to build system (configs, etc.)
-#   * ci           Changes to CI pipeline/workflow
-# ----------------------------------------------------------
+# ---------------------------------------------------------------------
+# Header - type(scope): Brief description
+# ---------------------------------------------------------------------
+#    * fix              A bug fix - SemVar PATCH
+#    * feat             A new feature - SemVar MINOR
+#    * BREAKING CHANGE  Breaking API change - SemVar MAJOR
+#    * docs             Changes to documentation only
+#    * style            Changes to style (whitespace, etc.)
+#    * refactor         Changes not related to a bug or feature
+#    * perf             Changes that affects performance
+#    * test             Changes that adds/modifies/corrects tests
+#    * build            Changes to build system
+#    * ci               Changes to CI pipeline/workflow
+#    * chore            General tooling/config/min refactor
+# -------10--------20--------30--------40--------50--------60--------70
 
 
-# ----------------------------------------------------------
+# ---------------------------------------------------------------------
 # Body - More detailed description, if necessary
-# ----------------------------------------------------------
-#   * Motivation behind changes, more detail into how
-# functionality might be affected, etc.
-# ----------------------------------------------------------
+# ---------------------------------------------------------------------
+#    * Motivation behind changes, more detail into how
+#      functionality might be affected, etc.
+# -------10--------20--------30--------40--------50--------60--------70
 
 
-# ----------------------------------------------------------
+# ---------------------------------------------------------------------
 # Footer - Associated issues, PRs, etc.
-# ----------------------------------------------------------
-#   * Ex: Resolves Issue #207, see PR #15, etc.
-# ----------------------------------------------------------
+# ---------------------------------------------------------------------
+#    * Ex: Resolves Issue #207, see PR #15, etc.
+# -------10--------20--------30--------40--------50--------60--------70
+
+
+# ---------------------------------------------------------------------
+# Conventional Commits 1.0.0
+# https://www.conventionalcommits.org/en/v1.0.0/
+# ---------------------------------------------------------------------
