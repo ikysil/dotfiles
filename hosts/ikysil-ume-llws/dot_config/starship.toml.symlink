@@ -1,3 +1,11 @@
+[aws]
+format = 'on [$symbol$profile(\($region\))]($style) '
+style = "bold blue"
+symbol = "☁️ "
+
+[aws.region_aliases]
+eu-central-1 = "eu"
+
 [battery]
 full_symbol = "🔋"
 charging_symbol = "🔌"
