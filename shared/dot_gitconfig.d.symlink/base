@@ -11,6 +11,9 @@
     status = auto
     ui = true
 
+[init]
+    defaultBranch = main
+
 [svn]
     rmdir = true
 
