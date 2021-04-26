@@ -36,14 +36,14 @@ windows:
   - ume-technical-architecture:
       - cd ume-technical-architecture
       - git ssb
-      - code -n $PWD
+      - codium -n $PWD
   - ume-orientdb:
       - docker start orientdb
       - docker logs -f orientdb
   - ume-web-client:
       - cd ume-web-client
       - git ssb
-      - code -n $PWD
+      - codium -n $PWD
   - ume-api-client:
       - cd ume-api-client
       - git ssb
