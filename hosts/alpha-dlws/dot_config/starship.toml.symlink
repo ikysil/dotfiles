@@ -28,7 +28,8 @@ commit_hash_length = 8
 style = "bold white"
 
 [git_state]
-progress_divider = " of "
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
 
 [git_status]
 conflicted = "⚔️ "
@@ -57,9 +58,7 @@ symbol = "ஃ "
 style = "bold green"
 
 [memory_usage]
-format = "$symbol[${ram}( | ${swap})]($style) "
-show_percentage = true
-show_swap = true
+format = "$symbol[${ram} ${ram_pct}( | ${swap} ${swap_pct})]($style) "
 threshold = 50
 style = "bold dimmed white"
 disabled = false
@@ -80,4 +79,3 @@ disabled = false
 [username]
 style_user = "bold dimmed blue"
 show_always = false
-
