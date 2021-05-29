@@ -30,7 +30,7 @@ root: ~/workshop/ikysil/ikforth
 windows:
   - source:
     - git ssb
-    - code .
+    - codium .
   - build:
     - docker run --rm -it -v $PWD:/opt/ikforth ikforth-build:latest
 
