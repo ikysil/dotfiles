@@ -1,8 +1,12 @@
 # ~/.bash_aliases
 
-alias mvnci='mvn clean install'
-alias mvni='mvn install'
+alias mvnci='mvn -V clean install'
+alias mvni='mvn -V install'
+alias mwcv='./mvnw -V clean verify'
+alias mwv='./mvnw -V verify'
 
+alias jdbr='java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2'
+alias jdbs='java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -Djdk.tls.client.protocols=TLSv1.1,TLSv1.2'
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
