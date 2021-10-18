@@ -22,6 +22,12 @@ error_symbol = "[✖](bold red) "
 min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
 format = " took [$duration]($style)"
 
+[custom.task_count_pending]
+command = "task count rc.gc=off rc.verbose=nothing status:pending"
+when = "which task"
+symbol = " 🛠 "
+description = "Count of pending Taskwarrior tasks"
+
 [directory]
 truncation_length = 5
 format = "[$path]($style)[$lock_symbol]($lock_style) "
