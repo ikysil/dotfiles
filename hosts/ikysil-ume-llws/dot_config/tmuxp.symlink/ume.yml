@@ -30,6 +30,10 @@ shell_command_before:
 # post: tmux -CC attach -t ume
 
 windows:
+- window_name: tasks
+  panes:
+  - shell_command:
+    - vit
 - window_name: ume-main-web
   panes:
   - shell_command:
