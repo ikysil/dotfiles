@@ -55,7 +55,5 @@ Use the following commands at a terminal to do the needed configurations: (pleas
 ```bash
 sudo -s
 sed -ie 's/GRUB_CMDLINE_LINUX_DEFAULT="\(.*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 xhci_hcd.quirks=1073741824"/' /etc/default/grub
+update-grub && exit
 ```
-
-Ubuntu
-`update-grub && exit`
