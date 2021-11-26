@@ -34,3 +34,28 @@ Reboot and you should be able to suspend and resume properly with driver version
 NOTE: Backup your configuration just in case, or downgrade the driver if this does not work on your setup. This was tested on Kubuntu 21.04 with GeForce GT 710.
 
 ----
+<https://www.tuxedocomputers.com/en/Infos/Help-Support/Help-for-my-device/TUXEDO-Book-BA-series/TUXEDO-Book-BA15/Suspend-problems-on-devices-with-Ryzen-CPU.tuxedo>
+
+If you have suspend problems with your TUXEDO Book and built-in AMD Ryzen CPU of the 4000 series, you can find help here.
+
+Affects potentially all TUXEDO Books with AMD Ryzen CPU of the 4000 series:
+
+- Aura 15
+- Pulse 14, Pulse 15
+- Polaris 15, Polaris 17
+- XA15
+
+Affects operating systems:
+
+- TUXEDO_OS 20.04, Ubuntu 20.04
+
+Solution
+Use the following commands at a terminal to do the needed configurations: (please type in your password when asked):
+
+```bash
+sudo -s
+sed -ie 's/GRUB_CMDLINE_LINUX_DEFAULT="\(.*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 xhci_hcd.quirks=1073741824"/' /etc/default/grub
+```
+
+Ubuntu
+`update-grub && exit`
