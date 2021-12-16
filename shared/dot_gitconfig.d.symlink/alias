@@ -46,6 +46,9 @@
     # add just the files that are updated.
     au = add --update
 
+    # record intent to add all files
+    aai = add --all --intent-to-add
+
     ### branch ###
 
     # branch - edit the description
