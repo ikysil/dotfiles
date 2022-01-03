@@ -1,0 +1,15 @@
+[include]
+    path = ~/.gitconfig.d/base
+    path = ~/.gitconfig.d/alias
+
+[core]
+    autocrlf = input
+	pager = delta --dark
+
+[user]
+    name = Illya Kysil
+    email = ikysil@ikysil.name
+[color]
+	ui = auto
+[sequence]
+	editor = interactive-rebase-tool
