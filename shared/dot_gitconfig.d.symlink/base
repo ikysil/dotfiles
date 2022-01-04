@@ -44,3 +44,6 @@
 
 [commit]
     template = ~/.gitconfig.d/commit.template
+
+[delta]
+    line-numbers = true
