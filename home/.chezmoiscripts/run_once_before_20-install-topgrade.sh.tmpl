@@ -1,0 +1,17 @@
+{{ if (eq .chezmoi.os "linux") -}}
+{{ if (eq .chezmoi.osRelease.id "debian" "ubuntu") -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+crates=(
+    topgrade
+    cargo-update
+)
+
+for crate in ${crates[@]}; do
+    cargo install $crate
+done
+
+{{ end -}}
+{{ end -}}
