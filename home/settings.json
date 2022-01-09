@@ -1,0 +1,71 @@
+{
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.fontSize": 16,
+    "terminal.integrated.fontFamily": "monospace",
+    "redhat.telemetry.enabled": true,
+    "keyboard.dispatch": "keyCode",
+    "screencastMode.onlyKeyboardShortcuts": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-f>": false,
+        "<C-h>": false,
+        "<C-k>": false,
+        "<C-v>": false,
+        "<C-w>": false,
+        "<C-x>": false
+    },
+    "vim.overrideCopy": false,
+    "editor.cursorSurroundingLines": 3,
+    "workbench.editor.highlightModifiedTabs": true,
+    "security.workspace.trust.untrustedFiles": "open",
+}
