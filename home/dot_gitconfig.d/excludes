@@ -1,0 +1,51 @@
+target/
+build/
+dist/
+private/
+.settings/
+.project
+.classpath
+.factorypath
+
+.idea/
+!.idea/scopes
+*.iml
+*.ipr
+*.iws
+
+*.log
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+!*.war/
+
+*~
+.~*
+
+# maven versions plugin
+pom.xml.versionsBackup
+
+# Git merge artifacts
+*.orig
+
+.gradle/
+
+nbproject/
+nbactions*.xml
+nb-configuration.xml
+nbproject/private/
+
+.vscode/
+.vagrant/
+
+# Scratch area in Maven projects
+.scratch/
+
+.attach_pid*
+
+.repo/
+.ionide/

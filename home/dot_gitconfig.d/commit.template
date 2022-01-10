@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------
+# Header - type(scope): Brief description
+# ---------------------------------------------------------------------
+#    * fix              A bug fix - SemVar PATCH
+#    * feat             A new feature - SemVar MINOR
+#    * BREAKING CHANGE  Breaking API change - SemVar MAJOR
+#    * docs             Changes to documentation only
+#    * style            Changes to style (whitespace, etc.)
+#    * refactor         Changes not related to a bug or feature
+#    * perf             Changes that affects performance
+#    * test             Changes that adds/modifies/corrects tests
+#    * build            Changes to build system
+#    * ci               Changes to CI pipeline/workflow
+#    * chore            General tooling/config/min refactor
+# -------10--------20--------30--------40--------50--------60--------70
+
+
+# ---------------------------------------------------------------------
+# Body - More detailed description, if necessary
+# ---------------------------------------------------------------------
+#    * Motivation behind changes, more detail into how
+#      functionality might be affected, etc.
+# -------10--------20--------30--------40--------50--------60--------70
+
+
+# ---------------------------------------------------------------------
+# Footer - Associated issues, PRs, etc.
+# ---------------------------------------------------------------------
+#    * Ex: Resolves Issue #207, see PR #15, etc.
+#
+#    BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:,
+#    or appends a ! after the type/scope, introduces a breaking
+#    API change (correlating with MAJOR in semantic versioning).
+#    A BREAKING CHANGE can be part of commits of any type.
+# -------10--------20--------30--------40--------50--------60--------70
+# BREAKING CHANGE:
+
+# ---------------------------------------------------------------------
+# Conventional Commits 1.0.0
+# https://www.conventionalcommits.org/en/v1.0.0/
+# ---------------------------------------------------------------------
