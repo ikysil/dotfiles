@@ -1,0 +1,17 @@
+[include]
+    path = ~/.gitconfig.d/base
+    path = ~/.gitconfig.d/alias
+
+[core]
+    autocrlf = input
+    pager = delta --dark
+
+[user]
+    name = {{ .name }}
+    email = {{ .email }}
+
+[color]
+    ui = auto
+
+[sequence]
+    editor = interactive-rebase-tool
