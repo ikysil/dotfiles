@@ -44,7 +44,16 @@
 {{-   end -}}
 {{- end -}}
 
+{{ $name := "Illya Kysil" }}
+{{ $email := "ikysil@ikysil.name" }}
+{{ if stdinIsATTY }}
+{{   $name = promptString "name" $name }}
+{{   $email = promptString "email" $email }}
+{{ end }}
+
 [data]
+  name = {{ $name | quote }}
+  email = {{ $email | quote }}
   headless = {{ $headless }}
   hostname = {{ $hostname | quote }}
   ephemeral = {{ $ephemeral }}
