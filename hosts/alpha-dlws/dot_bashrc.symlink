@@ -70,3 +70,4 @@ function rse(){
 while IFS= read -r path; do
     . "$path"
 done < <(find -L ~/.bashrc.d -type f | sort)
+. "$HOME/.cargo/env"
