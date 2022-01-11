@@ -53,7 +53,7 @@
 
 # Commands to run before anything
 [pre_commands]
-"Repair LinuxBrew permissions" = "command -v brew && sudo chown $(whoami):linuxbrew -R $(brew --prefix)"
+"Repair LinuxBrew permissions" = "command -v brew && sudo chown $(whoami):$(stat -c '%G' $(brew --prefix)) -R $(brew --prefix)"
 #"Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
 
 # Custom commands
