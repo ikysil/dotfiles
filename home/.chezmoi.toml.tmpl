@@ -51,6 +51,11 @@
 {{   $email = promptString "email" $email }}
 {{ end }}
 
+encryption = "gpg"
+
+[gpg]
+    recipient = "ikysil@ikysil.name"
+
 [data]
   name = {{ $name | quote }}
   email = {{ $email | quote }}
