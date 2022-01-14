@@ -44,17 +44,29 @@
 {{-   end -}}
 {{- end -}}
 
-{{ $name := "Illya Kysil" }}
-{{ $email := "ikysil@ikysil.name" }}
-{{ if stdinIsATTY }}
-{{   $name = promptString "name" $name }}
-{{   $email = promptString "email" $email }}
-{{ end }}
+{{- $name_default := "Illya Kysil" -}}
+{{- $email_default := "ikysil@ikysil.name" -}}
+
+{{- if hasKey . "name" -}}
+{{-   $name_default = .name -}}
+{{- end -}}
+
+{{- if hasKey . "email" -}}
+{{-   $email_default = .email -}}
+{{- end -}}
+
+{{- $name := $name_default -}}
+{{- $email := $email_default -}}
+
+{{- if stdinIsATTY -}}
+{{-   $name = promptString "name" $name_default -}}
+{{-   $email = promptString "email" $email_default -}}
+{{- end -}}
 
 encryption = "gpg"
 
 [gpg]
-    recipient = "ikysil@ikysil.name"
+  recipient = "ikysil@ikysil.name"
 
 [data]
   name = {{ $name | quote }}
