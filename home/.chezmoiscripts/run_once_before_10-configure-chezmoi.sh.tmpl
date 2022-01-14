@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+cd $(chezmoi source-path)
+
+git config user.name "Illya Kysil"
+git config user.email "ikysil@ikysil.name"
