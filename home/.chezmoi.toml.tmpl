@@ -3,6 +3,7 @@
 {{- $ephemeral := false -}}{{/* true if this machine is ephemeral, e.g. a cloud or VM instance */}}
 {{- $kubernetes := false -}}{{/* true if this machine is used for Kubernetes work */}}
 {{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
+{{- $snoodev := false -}}{{/* true if this machine should have snoodev configuration */}}
 {{- "" -}}
 
 {{/* detect GitHub codespaces, VSCode remote containers, Docker containers, Multipass VMs, and Vagrant boxes */}}
@@ -46,6 +47,7 @@
 
 {{- $name_default := "Illya Kysil" -}}
 {{- $email_default := "ikysil@ikysil.name" -}}
+{{- $snoodev_default := false -}}
 
 {{- if hasKey . "name" -}}
 {{-   $name_default = .name -}}
@@ -55,12 +57,18 @@
 {{-   $email_default = .email -}}
 {{- end -}}
 
+{{- if hasKey . "snoodev" -}}
+{{-   $snoodev_default = .snoodev -}}
+{{- end -}}
+
 {{- $name := $name_default -}}
 {{- $email := $email_default -}}
+{{- $snoodev := $snoodev_default -}}
 
 {{- if stdinIsATTY -}}
 {{-   $name = promptString "name" $name_default -}}
 {{-   $email = promptString "email" $email_default -}}
+{{-   $snoodev = promptBool "snoodev" $snoodev_default -}}
 {{- end -}}
 
 encryption = "gpg"
@@ -76,3 +84,4 @@ encryption = "gpg"
   ephemeral = {{ $ephemeral }}
   kubernetes = {{ $kubernetes }}
   personal = {{ $personal }}
+  snoodev = {{ $snoodev }}
