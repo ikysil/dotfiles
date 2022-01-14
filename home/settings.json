@@ -68,4 +68,6 @@
     "editor.cursorSurroundingLines": 3,
     "workbench.editor.highlightModifiedTabs": true,
     "security.workspace.trust.untrustedFiles": "open",
+    "git.confirmSync": false,
+    "git.autofetch": true,
 }
