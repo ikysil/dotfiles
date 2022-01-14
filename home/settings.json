@@ -70,4 +70,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "git.confirmSync": false,
     "git.autofetch": true,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.defaultLocation": "editor",
+    "terminal.integrated.defaultProfile.linux": "tmux",
 }
