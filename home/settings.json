@@ -71,6 +71,6 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "terminal.integrated.allowChords": false,
-    "terminal.integrated.defaultProfile.linux": "tmux",
+    "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.confirmOnKill": "always",
 }
