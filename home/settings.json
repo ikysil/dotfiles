@@ -73,4 +73,5 @@
     "terminal.integrated.allowChords": false,
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.confirmOnKill": "always",
+    "go.toolsManagement.autoUpdate": true,
 }
