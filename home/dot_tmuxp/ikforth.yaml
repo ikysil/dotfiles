@@ -34,5 +34,5 @@ windows:
     - git ssb
     - codium .
   - shell_command:
-    - docker build --rm -f docker/fedora-35/Dockerfile --build-arg RUNUID=$UID -t ikforth-build:latest .
+    - docker build --rm -f docker/ubuntu-20.04-lts/Dockerfile --build-arg RUNUID=$UID -t ikforth-build:latest .
     - docker run --rm -it -v $PWD:/opt/ikforth --userns=host ikforth-build:latest
