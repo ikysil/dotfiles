@@ -4,6 +4,6 @@ Illya Kysil's dotfiles, managed with [`chezmoi`](https://github.com/twpayne/chez
 
 Install them with:
 
-    curl -sfL https://git.io/chezmoi | sh
+    sh -c "$(curl -fsLS chezmoi.io/get)"
     PATH=./bin:$PATH
     chezmoi init ikysil
