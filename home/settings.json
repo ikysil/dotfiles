@@ -64,7 +64,6 @@
         "<C-w>": false,
         "<C-x>": false
     },
-    "vim.overrideCopy": false,
     "editor.cursorSurroundingLines": 3,
     "workbench.editor.highlightModifiedTabs": true,
     "security.workspace.trust.untrustedFiles": "open",
@@ -77,4 +76,15 @@
     "[markdown]": {
         "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
     },
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.showMarksInGutter": true,
+    "vim.smartRelativeLine": true,
+    "vim.statusBarColorControl": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "vim.textwidth": 120,
+    "vim.vimrc.enable": true,
 }
