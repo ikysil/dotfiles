@@ -87,4 +87,7 @@
     },
     "vim.textwidth": 120,
     "vim.vimrc.enable": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
