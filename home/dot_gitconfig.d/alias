@@ -46,6 +46,8 @@
 
     ### cherry-pick ###
 
+    cpx = cherry-pick -x
+
     ### diff ###
 
     ### grep ###
