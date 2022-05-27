@@ -96,4 +96,6 @@
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.persistentSessionScrollback": 10000,
     "editor.largeFileOptimizations": false,
+    "gitlens.defaultDateLocale": null,
+    "gitlens.defaultDateFormat": null,
 }
