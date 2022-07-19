@@ -12,4 +12,8 @@ if [ -d "/home/linuxbrew/.linuxbrew" ] ; then
 		export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 	fi
 
+	# set PATH so it includes linuxbrew sbin if it exists
+	if [ -d "/home/linuxbrew/.linuxbrew/sbin" ] ; then
+		PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+	fi
 fi
