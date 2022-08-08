@@ -98,4 +98,5 @@
     "editor.largeFileOptimizations": false,
     "gitlens.defaultDateLocale": null,
     "gitlens.defaultDateFormat": null,
+    "window.zoomLevel": 0.5,
 }
