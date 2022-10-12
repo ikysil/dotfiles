@@ -1,13 +1,17 @@
 [ -f ~/.cargo/env ] && source ~/.cargo/env
 
-export CARGO_INSTALL_ROOT=/opt/cargo
+if [ -d /opt/cargo ] ; then
+    export CARGO_INSTALL_ROOT=/opt/cargo
 
-# set PATH so it includes cargo bin if it exists
-if [ -d "$CARGO_INSTALL_ROOT/bin" ] ; then
-    PATH="$CARGO_INSTALL_ROOT/bin:$PATH"
+    # set PATH so it includes cargo bin if it exists
+    if [ -d "$CARGO_INSTALL_ROOT/bin" ] ; then
+        PATH="$CARGO_INSTALL_ROOT/bin:$PATH"
+    fi
 fi
 
 # set PATH so it includes cargo bin if it exists
 if [ -d "$HOME/.cargo/bin" ] ; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+export PATH
