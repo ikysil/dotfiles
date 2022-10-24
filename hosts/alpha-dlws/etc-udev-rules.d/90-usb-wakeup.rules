@@ -1,0 +1,4 @@
+# Disable waking up from Logitech unified receiver
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c52b", ATTR{power/wakeup}="disabled"
+# Disable waking up from AJAZZ keyboard
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="05ac", ATTRS{idProduct}=="0256", ATTR{power/wakeup}="disabled"
