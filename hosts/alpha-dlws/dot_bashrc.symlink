@@ -71,3 +71,8 @@ while IFS= read -r path; do
     . "$path"
 done < <(find -L ~/.bashrc.d -type f | sort)
 . "$HOME/.cargo/env"
+
+# pnpm
+export PNPM_HOME="/home/ikysil/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
