@@ -102,4 +102,5 @@
     "vim.commandLineModeKeyBindingsNonRecursive": [
 
     ],
+    "editor.multiCursorModifier": "ctrlCmd",
 }
