@@ -103,4 +103,5 @@
 
     ],
     "editor.multiCursorModifier": "ctrlCmd",
+    "window.zoomLevel": 1,
 }
